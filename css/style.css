@@ -1,0 +1,483 @@
+html {
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  font-family: 'Merienda One', cursive, 'Open Sans', sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+/* selection */
+::-moz-selection { /* Code for Firefox */
+    color: #fff;
+    background: #ff9335;
+}
+
+::selection {
+    color: #fff;
+    background: #ff9335;
+}
+
+/********* start header  *****************/
+header{
+  width: 100%;
+  min-height: 56px;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 0 35px rgba(0,0,0,0.1);
+  margin-top: -8px;
+}
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+header img{
+  height: 55px;
+  margin-top: 2px;
+  float: left;
+}
+nav{
+	float: right;
+}
+header a{
+  display: block;
+  padding: 12px 15px 0px;
+}
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+nav li{
+  float: left;
+}
+nav li a{
+  text-decoration: none;
+  padding: 17px 15px;
+  display: inline-block;
+  font-size: 19px;
+  color: #333;
+  border-bottom: 2px solid #fff;
+  transition: all 0.3s;
+}
+nav .dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 230px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+nav .dropdown-content li{
+  float: none;
+}
+nav .dropdown-content a{
+  text-align: left;
+  display: block;
+  border-bottom: 2px #fff solid;
+  padding: 6px 15px ;
+}
+nav .dropdown-content a:hover, nav li a:hover{
+	border-bottom: 3px solid #ff9335;
+	color: #f66a32;
+  background: #fff;
+}
+nav .dropdown:hover .dropdown-content{
+    display: block;
+}
+/********* End header  *****************/
+/********* start main Sleider & para  *****************/
+#slider-right{
+  width: 58%;
+  float: right;
+  height: auto;
+  margin: 120px 0 15px;
+}
+#para-left{
+  width: 40%;
+  float: left;
+  height: auto;
+  margin: 120px 0 15px;
+  text-align: center;
+  padding: 10px;
+  color: #c34f21;
+  border: #f66a32 solid 1px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+#para-left h1{
+  font-size: 26px;
+}
+#para-left p{
+  font-size: 17px;
+  line-height: 28px;
+  color: #58595b;
+}
+#para-left .underline::after{
+  width: 300px;
+  margin: 22px auto 27px;
+}
+
+/*  slider in section 1*/
+
+.mySlides {
+  display: none;
+}
+#slider-right img {
+  width:100%;
+  vertical-align: middle;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #ffcb9d;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #f66a32;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .2}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .2}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+/********* End section 1 Sleider & para  *****************/
+/********* start section 2 about  *****************/
+section{
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+}
+#about-me .underline::after{
+  width: 95px;
+  margin: 5px auto -17px;
+}
+#about{
+  background-image: linear-gradient(rgba(255,147,53,.7),rgba(0,0,0,.9)), url(../img/pic.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 7px 0;
+}
+#about img{
+  margin-top: 21px;
+  width: 40%;
+  float: left;
+  height: auto;
+  background: blue;
+  border-radius: 50%;
+  border: 5px solid #ff9335;
+}
+#parag{
+  text-indent: 20px;
+  width: 56%;
+  height: auto;
+  float: right;
+}
+#about p{
+  text-align: justify;
+  font-size: 15px;
+  line-height: 28px;
+  color: #fff;
+}
+section h2{
+	font-size: 35px;
+	color: #58595b;
+}
+.underline::after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 120px;
+  background: #ff9335;
+  margin: 5px auto 0px;
+}
+/********* End section 2 about  *****************/
+/********* start section 3 & section 5 ptojects  *****************/
+#group-one .underline::after, #group-two .underline::after{
+ margin-bottom: 60px;
+}
+.box-left{
+  width: 49%;
+  float: left;
+  height: auto;
+}
+.box-right{
+  width: 49%;
+  float: right;
+  height: auto;
+}
+.content{
+  width: 97%;
+  height: 200px;
+  margin-left: 9px;
+}
+.img-right img{
+  float: right;
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+  border: 2px solid #f66a32;
+}
+.img-left img{
+  float: left;
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+  border: 2px solid #f66a32;
+}
+.desc-left{
+  text-align: right;
+  width: 370px;
+  margin-right: 20px;
+  padding: 8px;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.desc-right{
+  float: right;
+  text-align: left;
+  width: 370px;
+  margin-right: 20px;
+  padding: 8px;
+  font-size: 14px;
+}
+.box-left a, .box-right a{
+  text-decoration: none;
+  color: #58595b;
+}
+.box-left img:hover, .box-right img:hover{
+  border: #ff9335 1px solid;
+}
+.box-left a:hover, .box-right a:hover{
+  color: #f66a32;
+
+}
+
+/********* End section 3 & section 5ptojects  *****************/
+/********* start section 4 traditions  *****************/
+.tradition{
+  background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(../img/tradition.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 70px 0;
+}
+.tradition .container{
+ display: flex;
+ flex-direction: column;
+}
+section #intro{
+  margin: 0 auto 20px;
+  max-width: 1170px;
+  color: #737287;
+}
+.tradition .tradition-desc{
+ flex: 1;
+ text-align: left;
+ padding:0 15px;
+}
+.tradition img{
+ width: 100%;
+ height: 360px;
+ border: none;
+ border-radius: 7px 50px;
+}
+.tradition-desc h3, .tradition-desc h2, .tradition-desc p{
+ color: #fff;
+ margin: 0px;
+}
+.tradition-desc .underline::after{
+ margin: 15px 0 30px;
+}
+.tradition-desc h3{
+ color: #ff9335;
+ font-size: 41px;
+}
+.tradition-desc h2{
+ line-height: 42px;
+ font-size: 29px;
+}
+.tradition-desc p{
+  text-indent: 20px;
+  text-align: justify;
+  font-size: 15px;
+}
+section > div:nth-of-type(even){
+  background: #fff;
+}
+section > div:nth-of-type(even) h2, section > div:nth-of-type(even) p{
+ color: #333;
+}
+section > div:nth-of-type(even) .container{
+  flex-direction: column;
+}
+section > div:nth-of-type(2) .underline::after,
+section > div:nth-of-type(3) .underline::after{
+ width: 75px;
+}
+section > div:nth-of-type(1) .underline::after,
+section > div:nth-of-type(4) .underline::after,
+section > div:nth-of-type(5) .underline::after{
+ width: 129px;
+}
+section > div:nth-of-type(6) .underline::after{
+ width: 89px;
+}
+section > div:nth-of-type(7) .underline::after,
+section > div:nth-of-type(8) .underline::after,
+section > div:nth-of-type(9) .underline::after{
+ width: 187px;
+}
+
+/* @media */
+ @media(min-width:769px){
+
+  	.tradition .container{
+  		flex-direction: row-reverse;
+  	}
+
+  	section > div:nth-of-type(even) .container{
+  		flex-direction: row;
+  	}
+}
+/********* End section 4 traditions  *****************/
+/********* Start section 6 Github *****************/
+#visit-github img{
+
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+  border: 3px solid #ff9335;
+}
+/********* End section 6 Github *****************/
+/********* start footer  *****************/
+footer {
+  background: linear-gradient(#ffffff,#d3d8e8);
+}
+footer h2{
+  text-align: center;
+  color: #58595b;
+}
+footer .underline::after{
+  width: 90px;
+}
+footer img{
+  width: 57%;
+  height: auto;
+  float: right;
+}
+#left-footer{
+  width: 40%;
+  height: 197px;
+  padding: 17px 0;
+  text-align: center;
+}
+#left-footer p{
+  color: #58595b;
+  font-size: 16px;
+  margin: 9px 0;
+  text-align: left;
+}
+footer p a{
+  color: #f66a32;
+  text-decoration: none;
+  font-weight: bold;
+}
+footer p a:hover{
+  color: #ff9335;
+  text-decoration: underline;
+}
+.fa-envelope{
+  font-size: 21px;
+  margin-left: 7px;
+}
+.fa-whatsapp{
+  font-size: 27px;
+  margin-left: 7px;
+}
+footer .fa-github{
+  font-size: 35px;
+}
+#sub-footer{
+  padding: 2px 0;
+  background: #131313;
+  text-align: center;
+  border-top: 3px solid #ff9335;
+}
+#sub-footer p{
+  margin: 9px 0;
+  padding: 2px;
+  font-size: 13px;
+  color: #ff9335;
+}
+#sub-footer p a{
+  color: #bbb;
+  text-decoration: none;
+}
+
+.fa-heart {
+  animation:fa-heart 5s ease infinite;
+  font-size: 13px;
+}
+@keyframes fa-heart {
+  0% {
+    transform:scale(1);
+  }
+  5% {
+    transform:scale(1.25);
+  }
+  20% {
+    transform:scale(1);
+  }
+  30% {
+    transform:scale(1);
+  }
+  35% {
+    transform:scale(1.25);
+  }
+  50% {
+    transform:scale(1);
+  }
+  55% {
+    transform:scale(1.25);
+  }
+  70% {
+    transform:scale(1);
+  }
+}
